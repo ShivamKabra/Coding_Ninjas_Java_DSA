@@ -1,0 +1,38 @@
+You are given an integer array/list(ARR) of size N. It contains only 0s, 1s and 2s. Write a solution to sort this array/list in a 'single scan'.
+'Single Scan' refers to iterating over the array/list just once or to put it in other words, you will be visiting each element in the array/list just once.
+
+
+
+public class Solution {
+
+    public static void sort012(int[] arr){
+    	//Your code goes here
+        
+       int []arr_display=new int[arr.length];
+       int c=0;
+       for(int i=0;i<arr.length;i++){
+           if(arr[i]==0){
+               arr_display[c]=0;
+               c++;
+           }
+       }
+        for(int i=0;i<arr.length;i++){
+           if(arr[i]==1){
+               arr_display[c]=1;
+               c++;
+           }
+       }
+        for(int i=0;i<arr.length;i++){
+           if(arr[i]==2){
+               arr_display[c]=2;
+               c++;
+           }
+       }
+        
+       for(int i=0;i<arr.length;i++){
+          arr[i]=arr_display[i];
+       }
+        
+        
+    }
+}
